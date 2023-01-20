@@ -1,0 +1,134 @@
+<div class="container m-6 mt-3  mb-5 col-6" id="update">
+    <form>
+      <h2 class="h2 text-center text-secondary pt-2">Update</h2>
+      <div class="row pt-4 mb-3 ">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Employee Id</label>
+        <div class="col-2">
+          <input type="text" class="form-control " [(ngModel)]="employee_id" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+    
+        <div class="row pt-4 mb-3 ">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control " [(ngModel)]="employee_name" [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+        <div class="row pt-4 mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Date Of Birth</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" [(ngModel)]="employee_dob" [ngModelOptions]="{standalone: true}">
+            </div>
+          </div>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control"[(ngModel)]="employee_email" [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+                
+              <input class="form-check-input" type="radio" [(ngModel)]="employee_gender" name="emp_gender" value="Male" checked>
+              <label class="form-check-label" for="gridRadios1">
+             Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" [(ngModel)]="employee_gender" name="emp_gender"value="Female">
+              <label class="form-check-label" for="gridRadios2">
+             Female
+              </label>
+            </div>
+            
+          </div>
+          
+        </fieldset>
+      <div class="row pt-4 mb-3">
+          <label for="inputText" class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="employee_phone" [ngModelOptions]="{standalone: true}">
+          </div>
+          
+          <fieldset class="row mb-3 mt-3">
+              <legend class="col-form-label col-sm-2 pt-0">Roll</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                    
+                  <input class="form-check-input" type="radio" [(ngModel)]="employee_roll" name="employee_roll" value="Conductor" checked>
+                  <label class="form-check-label" for="gridRadios1">
+                 Conductor
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" [(ngModel)]="employee_roll" name="employee_roll"value="Driver">
+                  <label class="form-check-label" for="gridRadios2">
+                 Driver
+                  </label>
+                </div>
+                
+              </div>
+              
+            </fieldset>
+
+
+          </div>
+          <div class="row pt-2 mb-1">
+            <label for="inputText" class="col-sm-2 col-form-label">Address</label>
+            <div class="col-sm-8">
+              <textarea class="form-control" placeholder="Address" [(ngModel)]="employee_address" [ngModelOptions]="{standalone: true}" rows="2"  style="height: 100px;"></textarea>
+             
+            </div>
+            </div>
+            <div class="text-center ">
+                <button type="submit" class="btn btn-success mb-4 col-2" (click)="put(employee_id)">Update</button>
+            </div>
+      
+      </form>
+    </div>
+    
+
+
+<div class="container">
+<table class="table">
+    <thead class="text-center border-4 bg-secondary">
+        <tr>
+
+            <th>Emplopyee Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Joining Date</th>
+            <th>Address</th>
+            <th>Roll</th>
+            <th>Options</th>
+
+        </tr>
+    </thead>
+    <tbody class="text-center text-dark">
+        <tr *ngFor="let arr of Array">
+        
+            <td>{{arr. employee_id}}</td> 
+            <td>{{arr.employee_name}}</td>
+            <td>{{arr.employee_email}}</td>
+            <td>{{arr.employee_phone}}</td>
+            <td>{{arr.employee_gender}}</td>
+            <td>{{arr.employee_dob}}</td>
+            <td>{{arr.employee_address}}</td>
+           
+            <td>{{arr.employee_roll}}</td>
+            <td>
+                <button class="btn btn-success m-2" (click)="update(arr)">Update</button>
+                <button class="btn btn-danger m-2 " (click)="deleteEmp(arr.employee_id)">Delete</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+</div>

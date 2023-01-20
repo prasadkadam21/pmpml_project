@@ -1,0 +1,38 @@
+
+<div class="container">
+    <table class="table">
+        <thead class="text-center border-4 bg-secondary">
+            <tr>
+    
+              
+                <th>Bus Name</th>
+                <th>Bus Number</th>
+                <th>Driver</th>
+                <th>Conductor</th>
+                <th> Date</th>
+                <th>Start Time </th>
+                <th>Close Time</th>
+                
+    
+            </tr>
+        </thead>
+        <tbody class="text-center text-dark">
+            <tr *ngFor="let arr of Array">
+            
+               
+                <td>{{arr.bus_rname}}</td>
+                <td>{{arr.bus_rn}}</td>
+                <td>{{arr.employee_driver}}</td>
+                <td>{{arr.employee_conductor}}</td>
+                <td>{{arr.bus_rdate}}</td>
+                <td>{{arr.bus_start_rtime}}</td>  
+                <td>{{arr.bus_end_rtime}}</td>
+               
+            </tr>
+    
+        </tbody>
+    </table>
+    
+    
+    
+    </div>

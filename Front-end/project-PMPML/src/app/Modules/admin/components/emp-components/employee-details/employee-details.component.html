@@ -1,0 +1,20 @@
+
+
+  <ul class="list-group list-group-horizontal" >
+    <li class="list-group-item"*ngFor="let add of employeeArray">
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      
+        <h4>Employee Name</h4><h6>{{add.employee_id}}</h6>
+        <h4>Employee Id</h4><h6>{{add.employee_name}}</h6>
+    
+      <a  class="btn btn-primary" [routerLink]="['/admin/manage/profile',add.employee_id]">Show</a>
+    </div>
+  </div>
+    </li>
+  
+  </ul>
+  
+<router-outlet></router-outlet>

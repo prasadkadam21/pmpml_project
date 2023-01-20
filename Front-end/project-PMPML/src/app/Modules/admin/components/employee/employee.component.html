@@ -1,0 +1,42 @@
+
+  <nav class="navbar navbar-dark bg-light mt-2" aria-label="Dark offcanvas navbar">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler border border-dark bg-dark text-dark mt-1  btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Employee Management</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" routerLink="show-employee" routerLinkActive="active">Show Employees</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="add-employee" routerLinkActive="active">Add Employees</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="employee-details" routerLinkActive="active">Show Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="bus-service" routerLinkActive="active">Bus Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="bus-route" routerLinkActive="active">Bus Route</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="route-details" routerLinkActive="active">Bus Route Details</a>
+            </li>
+          </ul>
+        
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+ 
+<router-outlet></router-outlet>
+  

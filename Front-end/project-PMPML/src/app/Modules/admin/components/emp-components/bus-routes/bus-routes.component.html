@@ -1,0 +1,70 @@
+
+
+<div class="containers pt-5 pb-5" id="main">
+  <div class="container col-6 pt-5" id="update">
+    <form>
+      <h2 class="h2 text-center text-secondary pt-2">BUS ROUTE MANAGEMENT</h2>
+    
+
+      <div class="row pt-4 mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Driver Name</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control " [(ngModel)]="employee_name"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <div class="row pt-4 mb-3 ">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Conductor Name</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control " [(ngModel)]="employee_Conductor"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <div class="row pt-4 mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Bus Routes</label>
+
+      <div class="col-sm-9">
+      <select class="form-select "  [(ngModel)]="bus_rname" [ngModelOptions]="{standalone: true}">
+       
+        <option value="Hinjewadi Maan phase 3 to Bhekrainagar (208)">Hinjewadi Maan phase 3 to Bhekrainagar (208)</option>
+        <option value="Swargate To Yewalewadi (19)">Swargate To Yewalewadi (19)</option>
+        <option value="Swargate To Saswad (209)">Swargate To Saswad (209)</option>
+        <option value="Bhekrainagar To Alandi (201)">Bhekrainagar To Alandi (201)</option>
+        <option value="Bhekrainagar To Chinchwad S.K.F.Company (204)">Bhekrainagar To Chinchwad S.K.F.Company (204)</option>
+        <option value="Bharati Vidyapeeth To Swargate (216)">Bharati Vidyapeeth To Swargate (216)</option>
+        <option value="Pune Station Moledina Bus Stand To Hinjawadi Maan Phase 3 (115)">Pune Station Moledina Bus Stand To Hinjawadi Maan Phase 3 (115)</option>
+        <option value="Katraj To Kothrud Depot (103)">Katraj To Kothrud Depot (103)</option>
+     
+      </select>
+    </div>
+    </div>
+      <div class="row pt-4 mb-3 ">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Bus Route Number</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control " [(ngModel)]="bus_rn" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <div class="row pt-4 mb-3 ">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Date</label>
+        <div class="col-sm-7">
+          <input type="date" class="form-control " [(ngModel)]="bus_rdate" [ngModelOptions]="{standalone: true}" >
+        </div>
+      </div>
+      <div class="row pt-4 mb-3 ">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Time</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control " placeholder="start" [(ngModel)]="bus_start_rtime" [ngModelOptions]="{standalone: true}">&nbsp;To &nbsp;
+              
+              <input type="text" class="form-control " placeholder="end" [(ngModel)]="bus_end_rtime" [ngModelOptions]="{standalone: true}">
+            </div>
+      </div>
+          
+
+     
+      <div class="text-center ">
+        <button type="submit" class="btn btn-info mb-4 col-2" (click)="submit()">Add</button>
+      </div>
+
+    </form>
+  </div>
+</div>
